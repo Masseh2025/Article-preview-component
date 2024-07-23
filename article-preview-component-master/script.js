@@ -1,5 +1,5 @@
 const shareButton = document.getElementById("card__share");
 
-shareButton.addEventListener(onclick, function () {
+shareButton.addEventListener("click", function () {
   console.log("hello");
 });
