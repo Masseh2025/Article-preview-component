@@ -119,6 +119,8 @@ textarea:not([rows]) {
 .card__main-img {
   width: 35%;
   object-fit: cover;
+  border-top-left-radius: 12px;
+  border-bottom-left-radius: 12px;
 }
 
 /* card text */
@@ -149,6 +151,7 @@ textarea:not([rows]) {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background-color: var(--White);
 }
 
 .card__profile-picture {
@@ -177,23 +180,6 @@ textarea:not([rows]) {
   background-position: center;
   border: none;
   position: relative;
-}
-
-/* media queries */
-
-@media (max-width: 800px) {
-  .card {
-    flex-direction: column;
-  }
-
-  .card__main-img {
-    width: 100%;
-    max-height: 400px;
-  }
-
-  .card__text {
-    width: 100%;
-  }
 }
 
 /* tool tip */
@@ -230,6 +216,84 @@ textarea:not([rows]) {
 
 /* classes for js toggle */
 
-.tool-tip--invisible {
-  display: none;
+.invisible {
+  display: none !important;
+}
+
+.card__bottom--blue {
+  background-color: var(--Very-Dark-Grayish-Blue);
+}
+
+/* media queries */
+
+@media (max-width: 950px) {
+  .card {
+    flex-direction: column;
+  }
+
+  .card__main-img {
+    width: 100%;
+    max-height: 400px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 12px;
+    border-top-left-radius: 12px;
+  }
+
+  .card__text {
+    width: 100%;
+    padding-inline: 0;
+  }
+
+  .card__info {
+    display: none;
+  }
+
+  .card__tool-tip {
+    display: none;
+  }
+  .card__bottom {
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    padding-bottom: 1.25rem;
+    padding-top: 1.25rem;
+    padding-inline: 1.25rem;
+  }
+
+  .card__text {
+    padding-bottom: 0;
+  }
+
+  .card__heading,
+  .card__paragraph {
+    padding-inline: 2.5rem;
+  }
+
+  .card__footer {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.5em;
+    font-size: var(--paragraph-font-size);
+    color: var(--Grayish-Blue);
+  }
+
+  .card__footer .tool-tip__text,
+  .card__footer .icon {
+    margin-inline: 0.5rem;
+  }
+
+  .card__bottom-blue {
+    background-color: var(--Grayish-Blue);
+  }
+}
+
+@media (min-width: 950px) {
+  .card__footer {
+    display: none;
+  }
+
+  .card__bottom--blue {
+    background-color: var(--White);
+  }
 }
