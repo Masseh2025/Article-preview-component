@@ -114,6 +114,7 @@ textarea:not([rows]) {
   background-color: var(--White);
   border-radius: 12px;
   margin: 1rem;
+  box-shadow: 0px 25px 25px 0px rgba(0, 0, 0, 0.05);
 }
 
 .card__main-img {
@@ -180,6 +181,7 @@ textarea:not([rows]) {
   background-position: center;
   border: none;
   position: relative;
+  cursor: pointer;
 }
 
 /* tool tip */
@@ -258,6 +260,8 @@ textarea:not([rows]) {
     padding-bottom: 1.25rem;
     padding-top: 1.25rem;
     padding-inline: 1.25rem;
+    border-bottom-right-radius: 12px;
+    border-bottom-left-radius: 12px;
   }
 
   .card__text {
